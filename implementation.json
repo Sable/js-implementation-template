@@ -1,0 +1,26 @@
+{
+    "type": "implementation",
+    "short-name":"js",
+    "description":"Template for JavaScript implementations",
+    "language":"js",
+    "core-source-files": [
+       { "file": "./kernel.js"}
+    ],
+    "runner-source-file": { "file": "./runner.js" },
+    "runner-arguments": [
+        { "expand": "/experiment/input-size" }
+    ],
+    "libraries": [
+        { "file": "./verify.js" }
+    ],
+    "dependencies": [
+        {
+            "source": "https://github.com/Sable/ostrich-twister-prng.js.git",
+            "destination": { "file": "./twister/" }
+        }
+    ],
+    "compatibilities": [
+        "https://github.com/Sable/ostrich-browserify-compiler.git",
+        "https://github.com/Sable/ostrich-chrome-environment.git"
+    ]
+}
